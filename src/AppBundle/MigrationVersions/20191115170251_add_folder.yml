@@ -1,0 +1,25 @@
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: 2
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 47230fe0542aa9d967fafe861fa516de
+    location_remote_id: 07a39c9e566c9b49accb6a020b467786
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1573833706
+    publication_date: 1573833706
+    always_available: true
+    attributes:
+        name: 'French cities'
+        short_name: null
+        short_description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"

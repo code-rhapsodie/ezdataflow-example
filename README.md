@@ -49,3 +49,11 @@ $ php bin/console kaliop:migration:migrate
 ## Try
 
 Now you can use all command to try Dataflow bundle and eZ Dataflow bunble.
+
+Try this command:
+
+```shell script
+$ php bin/console code-rhapsodie:dataflow:execute fc '{"url":"https:\/\/geo.api.gouv.fr\/communes?fields=nom,code,codesPostaux,codeDepartement,codeRegion,population&format=json&geometry=centre","content_type":"city","parent_location_id":57}'
+```
+
+After end of work, go to admin into [this folder](http://127.0.0.1/admin/content/location/57).
