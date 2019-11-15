@@ -38,6 +38,14 @@ $ php bin/console code-rhapsodie:dataflow:dump-schema --update
 
 Execute queries on your databases.
 
+## Insert the City content type
+
+Execute this command to execute all Kaliop migration available:
+
+```shell script
+$ php bin/console kaliop:migration:migrate 
+```
+
 ## Try
 
 Now you can use all command to try Dataflow bundle and eZ Dataflow bunble.

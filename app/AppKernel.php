@@ -53,6 +53,7 @@ class AppKernel extends Kernel
             new EzSystems\EzPlatformMatrixFieldtypeBundle\EzPlatformMatrixFieldtypeBundle(),
             // OverblogGraphQLBundle has to be loaded after EzSystemsEzPlatformGraphQLBundle
             new Overblog\GraphQLBundle\OverblogGraphQLBundle(),
+            new Kaliop\eZMigrationBundle\EzMigrationBundle(),
             new CodeRhapsodie\DataflowBundle\CodeRhapsodieDataflowBundle(),
             new CodeRhapsodie\EzDataflowBundle\CodeRhapsodieEzDataflowBundle(),
             // Application

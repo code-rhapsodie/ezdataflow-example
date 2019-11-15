@@ -1,0 +1,88 @@
+-
+    type: content_type
+    mode: create
+    content_type_group: Content
+    identifier: city
+    name:
+        eng-GB: City
+    description: {  }
+    name_pattern: '<nom>'
+    url_name_pattern: ''
+    is_container: false
+    lang: eng-GB
+    attributes:
+        -
+            identifier: nom
+            type: ezstring
+            name:
+                eng-GB: Name
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: codesPostaux
+            type: eztext
+            name:
+                eng-GB: 'Zip code'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 2
+            field-settings:
+                textRows: 10
+            validator-configuration: {  }
+        -
+            identifier: population
+            type: ezinteger
+            name:
+                eng-GB: population
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 3
+            field-settings: {  }
+            validator-configuration:
+                IntegerValueValidator: { minIntegerValue: null, maxIntegerValue: null }
+        -
+            identifier: codeRegion
+            type: ezstring
+            name:
+                eng-GB: 'region code'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 4
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: codeDepartement
+            type: ezstring
+            name:
+                eng-GB: 'departement code'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 5
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
