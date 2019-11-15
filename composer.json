@@ -1,7 +1,7 @@
 {
     "name": "code-rhapsodie/ezdataflow-example",
-    "description": "eZ Dataflow example Symfony project",
-    "keywords": ["dataflow", "import", "symfony", "data processing"],
+    "description": "eZ Dataflow example Ez Platform project",
+    "keywords": ["dataflow", "ez dataflow", "ez platform", "import", "symfony", "data processing"],
     "license": "GPL-2.0-only",
     "type": "project",
     "authors": [
@@ -30,7 +30,7 @@
     },
     "require": {
         "php": "^7.1.3",
-        "code-rhapsodie/ezdataflow-bundle": "dev-master",
+        "code-rhapsodie/ezdataflow-bundle": "^2.0",
         "doctrine/doctrine-bundle": "^1.9.1",
         "doctrine/orm": "^2.6.3",
         "ezsystems/doctrine-dbal-schema": "~0.1.2",
@@ -54,6 +54,7 @@
         "friendsofsymfony/jsrouting-bundle": "^1.6.3",
         "incenteev/composer-parameter-handler": "^2.1.3",
         "knplabs/knp-menu-bundle": "^2.2.1",
+        "monolog/monolog": "^1.0",
         "overblog/graphql-bundle": "^0.11.11",
         "scssphp/scssphp": "~1.0",
         "seld/signal-handler": "^1.2",
