@@ -11,11 +11,7 @@ use eZ\Publish\API\Repository\ContentService;
 use eZ\Publish\API\Repository\Exceptions\NotFoundException;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-/**
- * @copy Code-Rhapsodie (c) 2019
- * Added by : cameleon at 15/10/2019 08:57
- */
-class ArticleDataflow //extends AbstractDataflowType
+class ArticleDataflow extends AbstractDataflowType
 {
     /**
      * @var ContentWriter

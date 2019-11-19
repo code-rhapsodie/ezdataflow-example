@@ -20,3 +20,8 @@ services:
 
     guzzle.client:
         class: GuzzleHttp\Client
+
+
+    AppBundle\DataflowType\Writer\MultipleContentStructureWriter:
+        arguments:
+            $contentStructureWriter: '@CodeRhapsodie\EzDataflowBundle\Writer\ContentWriter'
