@@ -21,6 +21,9 @@ services:
     guzzle.client:
         class: GuzzleHttp\Client
 
+    AppBundle\Service\GeoClient:
+        arguments:
+            - '@guzzle.client'
 
     AppBundle\DataflowType\Writer\MultipleContentStructureWriter:
         arguments:
