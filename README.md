@@ -48,6 +48,8 @@ $ php bin/console kaliop:migration:migrate
 
 ## Try
 
+Before execute command, get  folder 'French city' location id from backoffice [http://127.0.0.1/admin/content/location/54#ez-tab-location-view-details#tab](http://127.0.0.1/admin/content/location/54#ez-tab-location-view-details#tab).
+
 Now you can use all command to try Dataflow bundle and eZ Dataflow bunble.
 
 Try this command:
@@ -57,3 +59,11 @@ $ php bin/console code-rhapsodie:dataflow:execute fc '{"url":"https:\/\/geo.api.
 ```
 
 After end of work, go to admin into [the folder "French cities"](http://127.0.0.1/admin/content/location/57) with the eZ Publish admin.
+
+To add a schedule from back office, the option must be in YAML format like this:
+
+```yaml
+url: 'https://geo.api.gouv.fr/communes?fields=nom,code,codesPostaux,codeDepartement,codeRegion,population&format=json&geometry=centre'
+content_type: "city"
+parent_location_id: 54
+``` 
