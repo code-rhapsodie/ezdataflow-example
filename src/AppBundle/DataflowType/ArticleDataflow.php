@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace AppBundle\DataflowType;
 
+use CodeRhapsodie\DataflowBundle\DataflowType\AbstractDataflowType;
 use CodeRhapsodie\DataflowBundle\DataflowType\DataflowBuilder;
 use CodeRhapsodie\EzDataflowBundle\Model\ContentCreateStructure;
 use CodeRhapsodie\EzDataflowBundle\Model\ContentUpdateStructure;
