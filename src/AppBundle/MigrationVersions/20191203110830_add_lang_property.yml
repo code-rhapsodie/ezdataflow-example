@@ -1,0 +1,25 @@
+-
+  mode: create
+  type: language
+  lang: fre-FR
+  name: French
+
+-
+  mode: update
+  type: content_type
+  identifier: folder
+  attributes:
+    -
+      type: ezimage
+      name: image
+      identifier: image
+
+-
+  mode: update
+  type: content_type
+  identifier: city
+  attributes:
+    -
+      type: ezimage
+      name: image
+      identifier: image

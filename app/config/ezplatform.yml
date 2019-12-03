@@ -1,3 +1,6 @@
+imports:
+    - { resource: views.yaml }
+
 ezpublish:
     # HttpCache settings, By default 'local' (Symfony HttpCache Proxy), by setting it to 'http' you can point it to Varnish
     http_cache:
@@ -53,7 +56,7 @@ ezpublish:
             # so removing eng-GB from this list may lead to errors or content not being shown, unless you change
             # all eng-GB data to other locales first.
             # For admin this needs to contain all languages you want to translate content to on the given repository.
-            languages: [eng-GB]
+            languages: [eng-GB, fre-FR]
             content_tree_module:
                 contextual_tree_root_location_ids:
                     - 2 # Home (Content structure)
@@ -65,7 +68,8 @@ ezpublish:
                 media: /1/43/
 
         site:
-            languages: [eng-GB]
+            languages: [eng-GB, fre-FR]
+            design: site
 
     url_alias:
         slug_converter:
@@ -74,3 +78,7 @@ ezpublish:
 ez_platform_standard_design:
     # makes Kernel default templates (in EzPublishCoreBundle/Resources/views) part of standard Design
     override_kernel_templates: true
+
+ezdesign:
+    design_list:
+        site: [site, standard]

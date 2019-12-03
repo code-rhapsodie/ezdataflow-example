@@ -18,6 +18,11 @@ services:
         resource: '../../src/AppBundle/*'
         exclude: '../../src/AppBundle/{Entity,Migrations,Tests,Listener}'
 
+    AppBundle\Controller\:
+        resource: '../../src/AppBundle/Controller/*'
+        tags: ['controller.service_arguments']
+
+
     guzzle.client:
         class: GuzzleHttp\Client
 

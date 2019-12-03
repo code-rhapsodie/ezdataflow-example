@@ -1,0 +1,28 @@
+-
+  mode: update
+  type: content
+  match:
+    content_remote_id: 47230fe0542aa9d967fafe861fa516de
+  lang: eng-GB
+  attributes:
+    name: 'Import Public API'
+    short_name: null
+    short_description:
+      xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Simple import from public API.</para></section>\n"
+    description:
+      xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Dataflow example to import French cities from public API provided by Etalab.</para><para><link xlink:href=\"https://geo.api.gouv.fr/decoupage-administratif/communes\" xlink:show=\"none\">https://geo.api.gouv.fr/decoupage-administratif/communes</link></para></section>\n"
+    image: null
+-
+  mode: update
+  type: content
+  match:
+    content_remote_id: 47230fe0542aa9d967fafe861fa516de
+  lang: fre-FR
+  attributes:
+    name: 'Import d''API publique'
+    short_name: null
+    short_description:
+      xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Import simple depuis une API publique.</para></section>\n"
+    description:
+      xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Example d'un Dataflow important les villes de France depuis l'API publique fournie par Etalab.</para><para><link xlink:href=\"https://geo.api.gouv.fr/decoupage-administratif/communes\" xlink:show=\"none\">https://geo.api.gouv.fr/decoupage-administratif/communes</link></para></section>\n"
+    image: null
