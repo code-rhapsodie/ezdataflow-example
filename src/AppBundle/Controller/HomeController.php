@@ -22,6 +22,7 @@ class HomeController
         $query = new LocationQuery([
             'filter' => new LogicalAnd([
                 new Query\Criterion\ParentLocationId($view->getContent()->contentInfo->mainLocationId),
+                new Query\Criterion\ContentTypeIdentifier(['folder']),
                 new Query\Criterion\Visibility(Query\Criterion\Visibility::VISIBLE),
             ]),
             'sortClauses' => [new Query\SortClause\Location\Priority(Query::SORT_ASC)]
@@ -32,7 +33,7 @@ class HomeController
             $chidrens[] = $contentService->loadContentByContentInfo($searchHit->valueObject->contentInfo);
         }
         array_filter($chidrens);
-        $view->addParameters(['children'=> $chidrens]);
+        $view->addParameters(['childrens'=> $chidrens]);
 
         return $view;
     }
