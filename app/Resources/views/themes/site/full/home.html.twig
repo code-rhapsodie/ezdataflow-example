@@ -48,8 +48,7 @@
                 {% for item in childrens %}
                 <div class="col-md-6 col-lg-4">
                     <div class="portfolio-item mx-auto">
-                        <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
-                        {{ ez_render_field(item, 'image', {'alias': 'original', 'class': 'img-fluid'}) }}
+                        {{ ez_render_field(item, 'image', {'alias': 'folder_apercu', 'class': 'img-fluid'}) }}
                         <h2>{{ ez_content_name(item) }}</h2>
                         {{ ez_render_field(item, 'short_description') }}
                         <p><a href="{{ path('ez_urlalias', {'contentId': item.id}) }}" class="btn btn-outline-info btn-lg">See more</a></p>
