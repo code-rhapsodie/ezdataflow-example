@@ -11,3 +11,7 @@ services:
       MYSQL_PASSWORD: ezdataflow
     ports:
       - "3306:3306"
+  redis:
+    image: redis:5
+    ports:
+      - "6379:6379"

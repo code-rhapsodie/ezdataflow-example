@@ -55,7 +55,7 @@ Now you can use all command to try Dataflow bundle and eZ Dataflow bunble.
 Try this command:
 
 ```shell script
-$ php bin/console code-rhapsodie:dataflow:execute fc '{"url":"https:\/\/geo.api.gouv.fr\/communes?fields=nom,code,codesPostaux,codeDepartement,codeRegion,population&format=json&geometry=centre","content_type":"city","parent_location_id":57}'
+$ php bin/console code-rhapsodie:dataflow:execute fc '{"url":"https:\/\/geo.api.gouv.fr\/communes?fields=nom,code,codesPostaux,codeDepartement,codeRegion,population,centre&format=json&geometry=centre","content_type":"city","parent_location_id":57}'
 ```
 
 After end of work, go to admin into [the folder "French cities"](http://127.0.0.1/admin/content/location/57) with the eZ Publish admin.
@@ -63,7 +63,7 @@ After end of work, go to admin into [the folder "French cities"](http://127.0.0.
 To add a schedule from back office, the option must be in YAML format like this:
 
 ```yaml
-url: 'https://geo.api.gouv.fr/communes?fields=nom,code,codesPostaux,codeDepartement,codeRegion,population&format=json&geometry=centre'
+url: 'https://geo.api.gouv.fr/communes?fields=nom,code,codesPostaux,codeDepartement,codeRegion,population,centre&format=json&geometry=centre'
 content_type: "city"
 parent_location_id: 54
 ``` 

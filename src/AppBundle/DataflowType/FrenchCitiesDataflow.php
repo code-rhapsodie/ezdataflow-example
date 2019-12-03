@@ -53,7 +53,7 @@ class FrenchCitiesDataflow extends AbstractDataflowType
             ->addStep(function ($data) use ($options) {
                 $remoteId = sprintf('french-city-%d', $data['code']);
 
-                unset($data['code']);
+                unset($data['code'], $data['centre']);
 
                 $data['codesPostaux'] = implode(',', $data['codesPostaux']);
 

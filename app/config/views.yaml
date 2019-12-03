@@ -13,3 +13,7 @@ ezpublish:
             template: "@ezdesign/full/folder.html.twig"
             match:
               Identifier\ContentType: "folder"
+          city:
+            template: "@ezdesign/full/city.html.twig"
+            match:
+              Identifier\ContentType: "city"

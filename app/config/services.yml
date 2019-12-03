@@ -29,6 +29,7 @@ services:
     AppBundle\Service\GeoClient:
         arguments:
             - '@guzzle.client'
+            - '%mapbox_token%'
 
     AppBundle\DataflowType\Writer\MultipleContentStructureWriter:
         arguments:

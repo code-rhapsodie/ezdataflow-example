@@ -24,7 +24,7 @@ class FolderController
                 new Query\Criterion\ParentLocationId($view->getContent()->contentInfo->mainLocationId),
                 new Query\Criterion\Visibility(Query\Criterion\Visibility::VISIBLE),
             ]),
-            'sortClauses' => [new Query\SortClause\Location\Priority(Query::SORT_ASC)]
+            'sortClauses' => [new Query\SortClause\Location\Priority(Query::SORT_DESC)]
         ]);
         $childLocation = $searchService->findLocations($query);
         $chidrens = [];

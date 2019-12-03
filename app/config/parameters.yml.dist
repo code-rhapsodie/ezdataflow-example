@@ -19,3 +19,4 @@ parameters:
     env(DATABASE_COLLATION): utf8mb4_unicode_520_ci
     env(CACHE_POOL): cache.tagaware.filesystem
     env(CACHE_DSN): localhost
+    mapbox_token:
