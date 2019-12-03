@@ -32,10 +32,7 @@ class ArticleDataflow extends AbstractDataflowType
 
     protected function buildDataflow(DataflowBuilder $builder, array $options): void
     {
-        $builder->setReader([
-            ['id' => 1, 'title' => 'article 1', 'intro' => 'my great article'],
-            ['id' => 2, 'title' => 'article 2', 'intro' => 'my new <b>great</b> article'],
-        ])
+        $builder->setReader()
             ->addStep(function ($data) {
                 if (!isset($data['id'])) {
                     return false;

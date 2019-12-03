@@ -1,0 +1,46 @@
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: 2
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: e61d8121eec7eb6c669e3688a5cdecb1
+    location_remote_id: 9850dab6424cc6c71d4e16f85d08c8bf
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1575386425
+    publication_date: 1575386340
+    always_available: true
+    attributes:
+        name: 'RSS Feed'
+        short_name: null
+        short_description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Import news from RSS feed and import content.</para></section>\n"
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>This dataflow import news\_from <link xlink:href=\"https://www.lemonde.fr\" xlink:show=\"new\" xlink:title=\"\">Le monde</link></para><para><link xlink:href=\"https://www.lemonde.fr/rss/une.xml\" xlink:show=\"new\">https://www.lemonde.fr/rss/une.xml</link></para></section>\n"
+        image:
+            path: news-636978_960_720.png
+            filename: news-636978_960_720.png
+            alternativeText: ''
+-
+    type: content
+    mode: update
+    match:
+        content_remote_id: e61d8121eec7eb6c669e3688a5cdecb1
+    lang: fre-FR
+    attributes:
+        name: 'Flux RSS'
+        short_name: null
+        short_description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Importation de contenu en provenance d'un flux RSS.</para></section>\n"
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Ce dataflow importe les actualités du journal\_<link xlink:href=\"https://www.lemonde.fr\" xlink:show=\"new\" xlink:title=\"\">Le monde</link></para><para><link xlink:href=\"https://www.lemonde.fr/rss/une.xml\" xlink:show=\"new\">https://www.lemonde.fr/rss/une.xml</link></para></section>\n"
+        image:
+            path: news-636978_960_720.png
+            filename: news-636978_960_720.png
+            alternativeText: ''

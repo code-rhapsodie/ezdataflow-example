@@ -1,0 +1,89 @@
+-
+    type: content_type
+    mode: create
+    content_type_group: Content
+    identifier: short_news
+    name:
+        eng-GB: 'Short news'
+    description: {  }
+    name_pattern: '<title>'
+    url_name_pattern: ''
+    is_container: false
+    lang: eng-GB
+    attributes:
+        -
+            identifier: title
+            type: ezstring
+            name:
+                eng-GB: Title
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: description
+            type: eztext
+            name:
+                eng-GB: description
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 2
+            field-settings:
+                textRows: 10
+            validator-configuration: {  }
+        -
+            identifier: original_url
+            type: ezurl
+            name:
+                eng-GB: 'Original news'
+            description: {  }
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 3
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: published_date
+            type: ezdatetime
+            name:
+                eng-GB: published_date
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 4
+            field-settings:
+                defaultType: 0
+                useSeconds: false
+                dateInterval: null
+            validator-configuration: {  }
+        -
+            identifier: image
+            type: ezimage
+            name:
+                eng-GB: image
+            description: {  }
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 5
+            field-settings: {  }
+            validator-configuration:
+                FileSizeValidator: { maxFileSize: null }
