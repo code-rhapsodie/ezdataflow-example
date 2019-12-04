@@ -62,7 +62,8 @@ class FrenchCitiesDataflow extends AbstractDataflowType
                     $remoteId,
                     $options['language'],
                     $options['content_type'],
-                    $options['parent_location_id']
+                    $options['parent_location_id'],
+                    ContentStructureFactory::MODE_INSERT_ONLY
                 );
             })
             ->addWriter($this->contentWriter);
