@@ -17,3 +17,7 @@ ezpublish:
             template: "@ezdesign/full/city.html.twig"
             match:
               Identifier\ContentType: "city"
+          short_news:
+            template: "@ezdesign/full/short_news.html.twig"
+            match:
+              Identifier\ContentType: "short_news"
