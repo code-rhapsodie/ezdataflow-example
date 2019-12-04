@@ -48,10 +48,15 @@
                 {% for item in childrens %}
                 <div class="col-md-6 col-lg-4">
                     <div class="portfolio-item mx-auto">
-                        {{ ez_render_field(item, 'image', {'parameters':{ 'alias': 'folder_apercu'}, 'class': 'img-fluid'}) }}
+                        {{ ez_render_field(item, 'image', {'parameters':{ 'alias': 'thumb'}, 'class': 'img-fluid'}) }}
                         <h2>{{ ez_content_name(item) }}</h2>
                         {{ ez_render_field(item, 'short_description') }}
-                        <p><a href="{{ path('ez_urlalias', {'contentId': item.id}) }}" class="btn btn-outline-info btn-lg">See more</a></p>
+                        <div class="form-group">
+                            <a href="{{ path('ez_urlalias', {'contentId': item.id}) }}" class="btn btn-outline-info btn-lg">See more</a>
+                            {% if not ez_is_field_empty(item, 'github') %}&nbsp;&nbsp;
+                            <a href="{{ ez_field_value(item, 'github').link }}" class="btn btn-outline-dark btn-lg"><i class="fab fa-fw fa-github"></i> See code source</a>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
                 {% endfor %}
@@ -81,6 +86,7 @@
             <!-- About Section Content -->
             <div class="row">
                 <div class="col-lg-4 ml-auto">
+
                     <p class="lead">Dataflow bundle provide a simple way to import or export data from you project.</p>
                     <p class="text-center"><a class="btn btn-xl btn-outline-light" href="https://www.github.com/code-rhapsodie/dataflow-bundle/">
                             <i class="fab fa-fw fa-github mr-2"></i>

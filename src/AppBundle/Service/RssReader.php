@@ -8,17 +8,25 @@ use SimplePie;
 
 class RssReader
 {
+    /**
+     * @var SimplePie
+     */
+    private $reader;
+
+    public function __construct(SimplePie $reader)
+    {
+        $this->reader = $reader;
+    }
+
     public function read(string $url): iterable
     {
-        //'https://www.lemonde.fr/rss/une.xml'
-        $feed = new SimplePie();
-        $feed->set_cache_location(sys_get_temp_dir());
-        $feed->set_feed_url($url);
+        $this->reader->set_cache_location(sys_get_temp_dir());
+        $this->reader->set_feed_url($url);
 
-        $feed->init();
-        $feed->handle_content_type();
+        $this->reader->init();
+        $this->reader->handle_content_type();
 
-        foreach ($feed->get_items() as $item) {
+        foreach ($this->reader->get_items() as $item) {
             $path = null;
             if ($item->get_enclosure() !== null) {
                 $url = $item->get_enclosure()->get_link();

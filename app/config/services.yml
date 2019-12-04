@@ -34,3 +34,6 @@ services:
     AppBundle\DataflowType\Writer\MultipleContentStructureWriter:
         arguments:
             $contentStructureWriter: '@CodeRhapsodie\EzDataflowBundle\Writer\ContentWriter'
+
+    rss.reader:
+        class: SimplePie

@@ -27,6 +27,8 @@
             path: news-636978_960_720.png
             filename: news-636978_960_720.png
             alternativeText: ''
+        github:
+            link: 'https://github.com/code-rhapsodie/ezdataflow-example/blob/demo/src/AppBundle/DataflowType/ArticleDataflow.php'
 -
     type: content
     mode: update
@@ -44,3 +46,5 @@
             path: news-636978_960_720.png
             filename: news-636978_960_720.png
             alternativeText: ''
+        github:
+            link: 'https://github.com/code-rhapsodie/ezdataflow-example/blob/demo/src/AppBundle/DataflowType/ArticleDataflow.php'

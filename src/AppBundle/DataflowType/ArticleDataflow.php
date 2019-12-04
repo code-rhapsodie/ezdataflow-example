@@ -5,18 +5,11 @@ namespace AppBundle\DataflowType;
 
 use AppBundle\Service\ArticleDeleter;
 use AppBundle\Service\RssReader;
-use Cloudinary\Search;
 use CodeRhapsodie\DataflowBundle\DataflowType\AbstractDataflowType;
 use CodeRhapsodie\DataflowBundle\DataflowType\DataflowBuilder;
 use CodeRhapsodie\DataflowBundle\DataflowType\Result;
 use CodeRhapsodie\EzDataflowBundle\Factory\ContentStructureFactoryInterface;
-use CodeRhapsodie\EzDataflowBundle\Model\ContentCreateStructure;
-use CodeRhapsodie\EzDataflowBundle\Model\ContentUpdateStructure;
 use CodeRhapsodie\EzDataflowBundle\Writer\ContentWriter;
-use eZ\Publish\API\Repository\ContentService;
-use eZ\Publish\API\Repository\Exceptions\NotFoundException;
-use eZ\Publish\API\Repository\Values\Content\Query;
-use eZ\Publish\Core\Repository\SearchService;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class ArticleDataflow extends AbstractDataflowType
@@ -26,10 +19,6 @@ class ArticleDataflow extends AbstractDataflowType
      */
     private $contentWriter;
 
-    /**
-     * @var ContentService
-     */
-    private $contentService;
     /**
      * @var RssReader
      */
@@ -48,10 +37,9 @@ class ArticleDataflow extends AbstractDataflowType
      */
     private $contentStructureFactory;
 
-    public function __construct(ContentWriter $contentWriter, ContentService $contentService, ArticleDeleter $articleDeleter, RssReader $reader, ContentStructureFactoryInterface $contentStructureFactory)
+    public function __construct(ContentWriter $contentWriter, ArticleDeleter $articleDeleter, RssReader $reader, ContentStructureFactoryInterface $contentStructureFactory)
     {
         $this->contentWriter = $contentWriter;
-        $this->contentService = $contentService;
         $this->reader = $reader;
         $this->actualRemoteIds = [];
         $this->articleDeleter = $articleDeleter;

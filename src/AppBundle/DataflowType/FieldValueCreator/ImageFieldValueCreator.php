@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace AppBundle\DataflowType\FieldValueCreator;
 
 use CodeRhapsodie\EzDataflowBundle\Core\Field\FieldValueCreatorInterface;
+use eZ\Publish\Core\FieldType\Image\Type;
+use eZ\Publish\Core\FieldType\Image\Value as ImageValue;
 use eZ\Publish\Core\FieldType\Value;
 use Symfony\Component\Mime\MimeTypes;
-use eZ\Publish\Core\FieldType\Image\Value as ImageValue;
-use eZ\Publish\Core\FieldType\Image\Type;
 
 class ImageFieldValueCreator implements FieldValueCreatorInterface
 {

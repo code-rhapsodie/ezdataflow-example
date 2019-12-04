@@ -6,8 +6,8 @@ namespace AppBundle\DataflowType\FieldValueCreator;
 
 use CodeRhapsodie\EzDataflowBundle\Core\Field\FieldValueCreatorInterface;
 use eZ\Publish\Core\FieldType\Value;
-use EzSystems\EzPlatformRichText\eZ\RichText\InputHandlerInterface;
 use EzSystems\EzPlatformRichText\eZ\FieldType\RichText\Value as RichTextValue;
+use EzSystems\EzPlatformRichText\eZ\RichText\InputHandlerInterface;
 
 class RichTextFieldValueCreator implements FieldValueCreatorInterface
 {

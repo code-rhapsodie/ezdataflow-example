@@ -67,3 +67,20 @@ url: 'https://geo.api.gouv.fr/communes?fields=nom,code,codesPostaux,codeDepartem
 content_type: "city"
 parent_location_id: 54
 ``` 
+
+
+Usage of ArticleDataflowType
+
+Debug :
+
+```shell script
+$ bin/console code-rhapsodie:dataflow:execute ia '{"url":"https:\/\/www.lemonde.fr\/rss\/une.xml","content_type":"short_news","parent_location_id":55}'
+```
+
+From admin UI
+
+```yaml
+url: 'https://www.lemonde.fr/rss/une.xml'
+content_type: "short_news"
+parent_location_id: 55
+```

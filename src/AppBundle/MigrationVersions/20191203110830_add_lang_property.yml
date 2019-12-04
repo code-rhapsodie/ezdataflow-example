@@ -13,6 +13,10 @@
       type: ezimage
       name: image
       identifier: image
+    -
+      type: ezurl
+      name: github
+      identifier: github
 
 -
   mode: update

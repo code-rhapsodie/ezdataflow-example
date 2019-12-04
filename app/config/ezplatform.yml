@@ -72,10 +72,17 @@ ezpublish:
             design: site
             image_variations:
                 folder_apercu:
-                      reference: null
-                      filters:
+                    reference: null
+                    filters:
                         - { name: geometry/scalewidthdownonly, params: [300] }
-
+                thumb:
+                    reference: null
+                    filters:
+                        - {name: 'thumbnail', params: {size: [300, 300], mode: outbound}}
+                head:
+                    reference: null
+                    filters:
+                        - { name: geometry/scaleheightdownonly, params: [300] }
 
     url_alias:
         slug_converter:

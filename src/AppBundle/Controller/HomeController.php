@@ -13,7 +13,6 @@ use eZ\Publish\Core\MVC\Symfony\View\ContentView;
 use eZ\Publish\Core\MVC\Symfony\View\View;
 
 
-
 class HomeController
 {
     public function __invoke(View $view, SearchService $searchService, ContentService $contentService)
