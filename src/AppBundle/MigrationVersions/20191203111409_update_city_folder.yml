@@ -12,7 +12,7 @@
     description:
       xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Dataflow example to import French cities from public API provided by Etalab.</para><para><link xlink:href=\"https://geo.api.gouv.fr/decoupage-administratif/communes\" xlink:show=\"none\">https://geo.api.gouv.fr/decoupage-administratif/communes</link></para></section>\n"
     image:
-      path: api_logo.png
+      path: api-icon.png
     github:
       link: 'https://github.com/code-rhapsodie/ezdataflow-example/blob/demo/src/AppBundle/DataflowType/FrenchCitiesDataflow.php'
 -

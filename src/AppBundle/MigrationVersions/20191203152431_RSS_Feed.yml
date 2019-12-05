@@ -24,8 +24,8 @@
         description:
             xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>This dataflow import news\_from <link xlink:href=\"https://www.lemonde.fr\" xlink:show=\"new\" xlink:title=\"\">Le monde</link></para><para><link xlink:href=\"https://www.lemonde.fr/rss/une.xml\" xlink:show=\"new\">https://www.lemonde.fr/rss/une.xml</link></para></section>\n"
         image:
-            path: news-636978_960_720.png
-            filename: news-636978_960_720.png
+            path: news-icon.png
+            filename: news-icon.png
             alternativeText: ''
         github:
             link: 'https://github.com/code-rhapsodie/ezdataflow-example/blob/demo/src/AppBundle/DataflowType/ArticleDataflow.php'
@@ -42,9 +42,6 @@
             xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Importation de contenu en provenance d'un flux RSS.</para></section>\n"
         description:
             xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Ce dataflow importe les actualités du journal\_<link xlink:href=\"https://www.lemonde.fr\" xlink:show=\"new\" xlink:title=\"\">Le monde</link></para><para><link xlink:href=\"https://www.lemonde.fr/rss/une.xml\" xlink:show=\"new\">https://www.lemonde.fr/rss/une.xml</link></para></section>\n"
-        image:
-            path: news-636978_960_720.png
-            filename: news-636978_960_720.png
-            alternativeText: ''
+        image: null
         github:
             link: 'https://github.com/code-rhapsodie/ezdataflow-example/blob/demo/src/AppBundle/DataflowType/ArticleDataflow.php'

@@ -24,8 +24,8 @@
         description:
             xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>This dataflow imports the feed from one social media.</para></section>\n"
         image:
-            path: all-social-media-logos-png.png
-            filename: all-social-media-logos-png.png
+            path: social-icon.png
+            filename: social-icon.png
             alternativeText: ''
 -
     type: content
