@@ -1,0 +1,77 @@
+-
+    type: content_type
+    mode: create
+    content_type_group: Content
+    identifier: social_media_message
+    name:
+        eng-GB: 'Social media message'
+    description: {  }
+    name_pattern: '<text>'
+    url_name_pattern: ''
+    is_container: false
+    lang: eng-GB
+    attributes:
+        -
+            identifier: text
+            type: eztext
+            name:
+                eng-GB: text
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 1
+            field-settings:
+                textRows: 10
+            validator-configuration: {  }
+        -
+            identifier: username
+            type: ezstring
+            name:
+                eng-GB: username
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 2
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: created_at
+            type: ezdatetime
+            name:
+                eng-GB: created_at
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 3
+            field-settings:
+                defaultType: 0
+                useSeconds: false
+                dateInterval: null
+            validator-configuration: {  }
+        -
+            identifier: source
+            type: eztags
+            name:
+                eng-GB: source
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 4
+            field-settings:
+                hideRootTag: false
+                editView: Default
+            validator-configuration:
+                TagsValueValidator: { subTreeLimit: 1, maxTags: 0 }

@@ -45,9 +45,13 @@
                 {% for item in childrens %}
                     <div class="col-md-6 col-lg-4">
                         <div class="portfolio-item mx-auto">
-                            {{ ez_render_field(item, 'image', {'parameters':{'alias': 'folder_apercu'}, 'class': 'img-fluid'}) }}
-                            <h2>{{ ez_content_name(item) }}</h2>
-                            <p><a href="{{ path('ez_urlalias', {'contentId': item.id}) }}" class="btn btn-outline-info btn-lg">See more</a></p>
+                            {% if item.contentInfo.contentTypeId == content_type_id_city or item.contentInfo.contentTypeId == content_type_id_short_news %}
+                            {{ include('@ezdesign/inline/short_news.html.twig') }}
+                            {% endif %}
+
+                            {% if item.contentInfo.contentTypeId == content_type_id_social_media_message %}
+                                {{ include('@ezdesign/inline/social_media_message.html.twig') }}
+                            {% endif %}
                         </div>
                     </div>
                 {% endfor %}

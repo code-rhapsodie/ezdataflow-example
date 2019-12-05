@@ -54,9 +54,12 @@
         "friendsofsymfony/jsrouting-bundle": "^1.6.3",
         "guzzlehttp/guzzle": "^6.4",
         "incenteev/composer-parameter-handler": "^2.1.3",
+        "j7mbo/twitter-api-php": "^1.0",
         "kaliop/ezmigrationbundle": "^5.10",
         "knplabs/knp-menu-bundle": "^2.2.1",
+        "lolautruche/ez-core-extra-bundle": "^2.2",
         "monolog/monolog": "^1.0",
+        "netgen/tagsbundle": "^3.4",
         "overblog/graphql-bundle": "^0.11.11",
         "scssphp/scssphp": "~1.0",
         "seld/signal-handler": "^1.2",
@@ -72,7 +75,8 @@
         "twig/extensions": "^1.5.3",
         "twig/twig": "^2.5",
         "white-october/pagerfanta-bundle": "^1.2.2",
-        "willdurand/js-translation-bundle": "^2.6.6"
+        "willdurand/js-translation-bundle": "^2.6.6",
+        "ext-json": "*"
     },
     "require-dev": {
         "behat/behat": "^3.5.0",

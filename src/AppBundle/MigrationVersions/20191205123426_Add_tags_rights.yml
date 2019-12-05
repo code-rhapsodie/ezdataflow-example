@@ -1,0 +1,29 @@
+-
+    type: role
+    mode: update
+    match:
+        role_identifier: Anonymous
+    policies:
+        -
+            module: content
+            function: read
+            limitations:
+                - { identifier: Section, values: [standard] }
+        -
+            module: user
+            function: login
+            limitations:
+                - { identifier: SiteAccess, values: [site] }
+        -
+            module: content
+            function: view_embed
+            limitations:
+                - { identifier: Class, values: [image, file] }
+        -
+            module: tags
+            function: read
+            limitations: {  }
+        -
+            module: tags
+            function: view
+            limitations: {  }

@@ -2,6 +2,8 @@
 # https://symfony.com/doc/current/service_container.html
 parameters:
     #parameter_name: value
+    eztags.site.tag_view.pagelayout: 'themes/site/pagelayout.html.twig'
+    eztags.site.tag_view.template: 'themes/site/full/tag_view.html.twig'
 
 services:
     # default configuration for services in *this* file
@@ -37,3 +39,26 @@ services:
 
     rss.reader:
         class: SimplePie
+
+    short_article.deleter:
+        class: AppBundle\Service\ContentDeleter
+        arguments:
+            $contentTypeIdentifier: 'short_news'
+
+    AppBundle\DataflowType\ArticleDataflow:
+        arguments:
+            $articleDeleter: '@short_article.deleter'
+
+    AppBundle\DataflowType\TwitterDataflow:
+        arguments:
+            $twitDeleter: '@social_media_message.deleter'
+
+    social_media_message.deleter:
+        class: AppBundle\Service\ContentDeleter
+        arguments:
+            $contentTypeIdentifier: 'social_media_message'
+
+    twitter.client:
+        class: TwitterAPIExchange
+        arguments:
+            - {oauth_access_token: '%twitter_token_key%', oauth_access_token_secret: '%twitter_token_secret%', consumer_key: '%twitter_api_key%', consumer_secret: '%twitter_api_secret%'}

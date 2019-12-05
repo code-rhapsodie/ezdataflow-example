@@ -55,6 +55,8 @@ class AppKernel extends Kernel
             new Kaliop\eZMigrationBundle\EzMigrationBundle(),
             new CodeRhapsodie\DataflowBundle\CodeRhapsodieDataflowBundle(),
             new CodeRhapsodie\EzDataflowBundle\CodeRhapsodieEzDataflowBundle(),
+            new Lolautruche\EzCoreExtraBundle\EzCoreExtraBundle(),
+            new Netgen\TagsBundle\NetgenTagsBundle(),
             // Application
             new AppBundle\AppBundle(),
         ];

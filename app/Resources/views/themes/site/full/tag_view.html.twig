@@ -1,0 +1,58 @@
+{% extends ezpublish.configResolver.parameter( 'tag_view.pagelayout', 'eztags' ) %}
+
+{% set tag_keyword = netgen_tags_tag_keyword( tag ) %}
+
+{% block page_head %}
+    {% set title = tag_keyword %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+
+            <!-- Masthead Heading -->
+            <h1 class="masthead-heading text-uppercase mb-0">{{ tag_keyword }}</h1>
+
+            <!-- Icon Divider -->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="row">
+            <div class="span8">
+
+                {% if related_content|length > 0 %}
+                    <section class="content-view-children">
+                        {% for related_content_item in related_content %}
+                            {{ render(
+                                controller(
+                                    "ez_content:viewAction", {
+                                    "contentId": related_content_item.id,
+                                    "locationId": related_content_item.mainLocationId,
+                                    "viewType": "line",
+                                    "layout": false
+                                }
+                                )
+                            ) }}
+                        {% endfor %}
+                    </section>
+
+                    {% if related_content.haveToPaginate() %}
+                        <div class="pagination-centered">
+                            {{ pagerfanta( related_content, 'twitter_bootstrap_translated' ) }}
+                        </div>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
