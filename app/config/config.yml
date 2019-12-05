@@ -92,6 +92,10 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    globals:
+        content_type_id_city: '%content_type_id_city%'
+        content_type_id_short_news: '%content_type_id_short_news%'
+        content_type_id_social_media_message: '%content_type_id_social_media_message%'
 
 # Webpack Encore Configuration
 webpack_encore:

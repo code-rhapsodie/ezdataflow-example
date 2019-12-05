@@ -17,6 +17,10 @@ class DateTimeFieldValueCreator implements FieldValueCreatorInterface
 
     public function createValue(string $fieldTypeIdentifier, $hash): Value
     {
+        if ($hash instanceof \DateTime) {
+            return new DateAndTimeValue($hash);
+        }
+
         return DateAndTimeValue::fromTimestamp($hash);
     }
 }

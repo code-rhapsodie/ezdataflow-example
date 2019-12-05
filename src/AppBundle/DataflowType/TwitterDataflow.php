@@ -5,6 +5,7 @@ namespace AppBundle\DataflowType;
 
 use AppBundle\Service\ContentDeleter;
 use AppBundle\Service\RssReader;
+use AppBundle\Service\TwitterReader;
 use CodeRhapsodie\DataflowBundle\DataflowType\AbstractDataflowType;
 use CodeRhapsodie\DataflowBundle\DataflowType\DataflowBuilder;
 use CodeRhapsodie\DataflowBundle\DataflowType\Result;
@@ -12,7 +13,7 @@ use CodeRhapsodie\EzDataflowBundle\Factory\ContentStructureFactoryInterface;
 use CodeRhapsodie\EzDataflowBundle\Writer\ContentWriter;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class ArticleDataflow extends AbstractDataflowType
+class TwitterDataflow extends AbstractDataflowType
 {
     /**
      * @var ContentWriter
@@ -31,38 +32,44 @@ class ArticleDataflow extends AbstractDataflowType
     /**
      * @var ContentDeleter
      */
-    private $articleDeleter;
+    private $twitDeleter;
     /**
      * @var ContentStructureFactoryInterface
      */
     private $contentStructureFactory;
 
-    public function __construct(ContentWriter $contentWriter, ContentDeleter $articleDeleter, RssReader $reader, ContentStructureFactoryInterface $contentStructureFactory)
+    /**
+     * @var string
+     */
+    private $remoteIdPrefix;
+
+    public function __construct(ContentWriter $contentWriter, ContentDeleter $twitDeleter, TwitterReader $reader, ContentStructureFactoryInterface $contentStructureFactory)
     {
         $this->contentWriter = $contentWriter;
         $this->reader = $reader;
         $this->actualRemoteIds = [];
-        $this->articleDeleter = $articleDeleter;
+        $this->twitDeleter = $twitDeleter;
         $this->contentStructureFactory = $contentStructureFactory;
     }
 
     protected function buildDataflow(DataflowBuilder $builder, array $options): void
     {
-        $builder->setReader($this->reader->read($options['url']))
-            ->addStep(static function ($item) {
-                /** @var $item \SimplePie_Item */
-                $data = [
-                    'id' => $item->get_id(true),
-                    'title' => $item->get_title(),
-                    'description' => $item->get_description(),
-                    'original_url' => $item->get_link(),
-                    'published_date' => $item->get_date('U'),
-                    'image' => $item->image_path, // image property is dynamically added by the reader.
+        $this->remoteIdPrefix = sprintf('twit-%s', $options['username']);
+        $builder->setReader($this->reader->read($options['username'], $options['max_content']))
+            ->addStep(function ($data) use ($options) {
+                $newData = [
+                    'id' => $data['id'],
+                    'text' => $data['text'],
+                    'username' => $data['user']['screen_name'],
+                    'created_at' => new \DateTime($data['created_at']),
+                    'source' => ['keyword'=>'twitter'],
                 ];
-                return $data;
-            })->addStep(function ($data) use ($options) {
 
-                $remoteId = sprintf('article-%s', $data['id']);
+                return $newData;
+            })
+            ->addStep(function ($data) use ($options) {
+
+                $remoteId = sprintf('%s-%s', $this->remoteIdPrefix, $data['id']);
                 $this->actualRemoteIds[] = $remoteId;
                 unset($data['id']);
 
@@ -82,7 +89,7 @@ class ArticleDataflow extends AbstractDataflowType
     {
         $result = parent::process($options);
 
-        $this->articleDeleter->deleteAllExcluding($this->actualRemoteIds);
+        $this->twitDeleter->deleteAllExcluding($this->actualRemoteIds, $this->remoteIdPrefix);
 
         return $result;
     }
@@ -91,21 +98,22 @@ class ArticleDataflow extends AbstractDataflowType
     protected function configureOptions(OptionsResolver $optionsResolver): void
     {
         $optionsResolver->setDefaults([
-            'url' => null,
+            'username' => null,
             'content_type' => null,
             'parent_location_id' => null,
             'language' => 'eng-GB',
+            'max_content' => 10,
         ]);
-        $optionsResolver->setRequired(['url', 'content_type', 'parent_location_id']);
+        $optionsResolver->setRequired(['username', 'content_type', 'parent_location_id']);
     }
 
     public function getLabel(): string
     {
-        return 'Import article';
+        return 'Import Twitter';
     }
 
     public function getAliases(): iterable
     {
-        return ['ia'];
+        return ['it'];
     }
 }

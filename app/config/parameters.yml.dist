@@ -20,3 +20,10 @@ parameters:
     env(CACHE_POOL): cache.tagaware.filesystem
     env(CACHE_DSN): localhost
     mapbox_token:
+    twitter_api_key:
+    twitter_api_secret:
+    twitter_token_key:
+    twitter_token_secret:
+    content_type_id_city:
+    content_type_id_short_news:
+    content_type_id_social_media_message:

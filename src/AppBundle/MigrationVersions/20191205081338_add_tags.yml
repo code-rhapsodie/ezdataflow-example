@@ -1,0 +1,20 @@
+# Auto-generated Migration definition: Please modify to suit your needs (and remove this line ;-)!
+
+-
+    type: tag
+    mode: create
+    remote_id: tags-categorie-social-media
+    lang: eng-GB
+    keywords:
+        eng-GB: 'Social media'
+        fre-FR: 'Media social'
+
+-
+    type: tag
+    mode: create
+    parent_tag_id: tags-categorie-social-media
+    remote_id: tags-social-media-twitter
+    lang: eng-GB
+    keywords:
+        eng-GB: 'Twitter'
+        fre-FR: 'Twitter'
