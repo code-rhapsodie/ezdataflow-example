@@ -90,16 +90,16 @@
         },
         {
             "name": "code-rhapsodie/ezdataflow-bundle",
-            "version": "v2.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/code-rhapsodie/ezdataflow-bundle.git",
-                "reference": "ca37b2438dc52f2d880488bdd7b0926f35afc1f4"
+                "reference": "d631e6555eba7cae7239d3d41e8e5b0f2a9e4b68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/code-rhapsodie/ezdataflow-bundle/zipball/ca37b2438dc52f2d880488bdd7b0926f35afc1f4",
-                "reference": "ca37b2438dc52f2d880488bdd7b0926f35afc1f4",
+                "url": "https://api.github.com/repos/code-rhapsodie/ezdataflow-bundle/zipball/d631e6555eba7cae7239d3d41e8e5b0f2a9e4b68",
+                "reference": "d631e6555eba7cae7239d3d41e8e5b0f2a9e4b68",
                 "shasum": ""
             },
             "require": {
@@ -161,7 +161,7 @@
                 "ez publish",
                 "import"
             ],
-            "time": "2019-11-13T09:36:37+00:00"
+            "time": "2019-12-05T14:25:50+00:00"
         },
         {
             "name": "composer/ca-bundle",
