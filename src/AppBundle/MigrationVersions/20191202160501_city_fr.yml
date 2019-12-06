@@ -1,0 +1,11 @@
+-   mode: update
+    match:
+        remote_id: 47230fe0542aa9d967fafe861fa516de
+    lang: fre-FR
+    attributes:
+        name: 'Import d''API public'
+        short_name: null
+        short_description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Import simple depuis une API publique.</para></section>\n"
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Import simple depuis une API publique.</para><para>Voici un exemple d'un flux de données provenant de l'API public Etalab des commundes de France :</para><para><link xlink:href=\"https://geo.api.gouv.fr/decoupage-administratif/communes\" xlink:show=\"new\">https://geo.api.gouv.fr/decoupage-administratif/communes</link></para></section>\n"

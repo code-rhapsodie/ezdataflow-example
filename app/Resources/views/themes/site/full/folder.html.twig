@@ -1,0 +1,46 @@
+{% extends '@ezdesign/pagelayout.html.twig' %}
+{% block content %}
+    <header class="masthead bg-primary text-white text-center">
+
+
+        {{ ez_render_field( content, 'image', { parameters: { 'alias': 'large', 'class': 'masthead-avatar mb-5'} } ) }}
+
+        <h1 class="masthead-heading text-uppercase mb-0">{{ ez_content_name(content) }}</h1>
+
+        <!-- Icon Divider -->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="divider-custom-line"></div>
+        </div>
+
+    </header>
+    <section class="page-section mb-0" id="content">
+        <div class="container">
+
+            <!-- About Section Content -->
+            <div class="row">
+                {{ ez_render_field(content, 'description') }}
+            </div>
+
+            <div class="row">
+                {% for children in childrens %}
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item mx-auto mb-5">
+                        {% if children.contentInfo.contentTypeId == 14 %} {# city #}
+                        <img src="https://maps.wikimedia.org/img/osm-intl,14,45.7464036,4.8089814,350x250.png">
+                            <img src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/4.926,46.1567,10,0,0/350x250?access_token=pk.eyJ1IjoiamJjciIsImEiOiJjazNvbXdkMXAwMHZrM2RvaW11ZHR1OHo3In0.UFUUDSq85TqkEZpZ8Kr3rA">
+                        {% endif %}
+                        <img class="img-fluid" src="{{ asset('img/Keyboard.png') }}">
+
+                        <h3>{{ ez_content_name(children) }}</h3>
+
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

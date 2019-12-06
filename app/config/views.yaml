@@ -1,0 +1,15 @@
+ezpublish:
+  system:
+    site:
+      content_view:
+        full:
+          home:
+            controller: AppBundle\Controller\HomeController
+            template: "@ezdesign/full/home.html.twig"
+            match:
+              Id\Location: 2
+          folder:
+            controller: AppBundle\Controller\FolderController
+            template: "@ezdesign/full/folder.html.twig"
+            match:
+              Identifier\ContentType: folder

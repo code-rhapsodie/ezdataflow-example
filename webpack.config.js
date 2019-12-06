@@ -9,14 +9,19 @@ Encore.reset();
 Encore.setOutputPath('web/assets/build')
     .setPublicPath('/assets/build')
     .enableSassLoader()
-    .enableReactPreset()
+    //.enableReactPreset()
     .enableSingleRuntimeChunk();
 
 // Put your config here.
-
+Encore.addEntry('app', './assets/js/app.js')
+    .addExternals({
+    'jQuery': 'jQuery',
+    'Popper': 'Popper',
+    // 'PR': 'code-prettify'
+});
 // uncomment the two lines below, if you added a new entry (by Encore.addEntry() or Encore.addStyleEntry() method) to your own Encore configuration for your project
-// const projectConfig = Encore.getWebpackConfig();
-// module.exports = [ eZConfig, ...customConfigs, projectConfig ];
+const projectConfig = Encore.getWebpackConfig();
+module.exports = [eZConfig, ...customConfigs, projectConfig];
 
 // comment-out this line if you've uncommented the above lines
-module.exports = [ eZConfig, ...customConfigs ];
+//module.exports = [ eZConfig, ...customConfigs ];
