@@ -1,69 +1,38 @@
-# Code Rhapsodie eZ Dataflow example
+# Ibexa Flex website skeleton
 
-This projet is based on eZ Platform 2.5.
+This is a Symfony Flex website skeleton allowing installation of all editions of
+[Ibexa DXP](https://www.ibexa.co/products) and Ibexa Open Source.
 
-## Requirements
+## Installation
 
-* A SGDB server (MySQL, MariaDB, or other...).
-* PHP 7.1+
-* composer
-* yarn
+For installation instructions of Ibexa DXP see either
+[the official documentation](https://doc.ibexa.co/) or packages for specific editions:
+* [Ibexa Content](https://github.com/ibexa/content)
+* [Ibexa Experience](https://github.com/ibexa/experience)
+* [Ibexa Commerce](https://github.com/ibexa/commerce)
 
-## Install
+Ibexa DXP is licensed under Ibexa Business Use License Agreement (Ibexa BUL) and requires
+a subscription. Learn more about [Ibexa DXP](https://www.ibexa.co/products).
 
-Clone this repository or download an archive.
+For installation instructions of Ibexa Open Source see [ibexa/oss](https://github.com/ibexa/oss)
+package.
 
-Open your favorite terminal, and go into `ezdataflow-example` folder.
-Execute this command to install all vendor dependencies :
+## COPYRIGHT
+Copyright (C) 1999-2021 Ibexa AS (formerly eZ Systems AS). All rights reserved.
 
-```shell script
-$ php composer install -o
-```
+## LICENSE
+This source code is available separately under the following licenses:
 
-## Init the databases
+A - Ibexa Business Use License Agreement (Ibexa BUL),
+version 2.3 or later versions (as license terms may be updated from time to time)
+Ibexa BUL is granted by having a valid Ibexa DXP (formerly eZ Platform Enterprise) subscription,
+as described at: https://www.ibexa.co/product
+For the full Ibexa BUL license text, please see:
+https://www.ibexa.co/software-information/licenses-and-agreements (latest version applies)
 
-Perform this command to initialize the database :
+AND
 
-```shell script
-$ php bin/console ezplatform:install clean
-```
-
-## Dataflow database schema
-
-Execute this command to dump all necessary SQL queries:
-
-```shell script
-$ php bin/console code-rhapsodie:dataflow:dump-schema --update
-```
-
-Execute queries on your databases.
-
-## Insert the City content type
-
-Execute this command to execute all Kaliop migration available:
-
-```shell script
-$ php bin/console kaliop:migration:migrate 
-```
-
-## Try
-
-Before execute command, get  folder 'French city' location id from backoffice [http://127.0.0.1/admin/content/location/54#ez-tab-location-view-details#tab](http://127.0.0.1/admin/content/location/54#ez-tab-location-view-details#tab).
-
-Now you can use all command to try Dataflow bundle and eZ Dataflow bunble.
-
-Try this command:
-
-```shell script
-$ php bin/console code-rhapsodie:dataflow:execute fc '{"url":"https:\/\/geo.api.gouv.fr\/communes?fields=nom,code,codesPostaux,codeDepartement,codeRegion,population&format=json&geometry=centre","content_type":"city","parent_location_id":57}'
-```
-
-After end of work, go to admin into [the folder "French cities"](http://127.0.0.1/admin/content/location/57) with the eZ Publish admin.
-
-To add a schedule from back office, the option must be in YAML format like this:
-
-```yaml
-url: 'https://geo.api.gouv.fr/communes?fields=nom,code,codesPostaux,codeDepartement,codeRegion,population&format=json&geometry=centre'
-content_type: "city"
-parent_location_id: 54
-``` 
+B - GNU General Public License, version 2
+Grants an copyleft open source license with ABSOLUTELY NO WARRANTY. For the full GPL license text, please see:
+- LICENSE file placed in the root of this source code, or
+- https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
