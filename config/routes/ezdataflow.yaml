@@ -1,0 +1,2 @@
+_cr.dataflow:
+    resource: '@CodeRhapsodieEzDataflowBundle/Resources/config/routing.yaml'

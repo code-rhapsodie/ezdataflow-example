@@ -1,0 +1,34 @@
+CityItem:
+    type: object
+    inherits:
+        - AbstractItem
+    config:
+        interfaces:
+            - Item
+            - Node
+        fields:
+            nom:
+                type: String
+                resolve: '@=resolver("ItemFieldValue", [value, "nom", args])'
+                args:
+                    language: { type: RepositoryLanguage }
+            codesPostaux:
+                type: String
+                resolve: '@=resolver("ItemFieldValue", [value, "codesPostaux", args])'
+                args:
+                    language: { type: RepositoryLanguage }
+            population:
+                type: Int
+                resolve: '@=resolver("ItemFieldValue", [value, "population", args]) !== null ? resolver("ItemFieldValue", [value, "population", args]).value : null'
+                args:
+                    language: { type: RepositoryLanguage }
+            codeRegion:
+                type: String
+                resolve: '@=resolver("ItemFieldValue", [value, "codeRegion", args])'
+                args:
+                    language: { type: RepositoryLanguage }
+            codeDepartement:
+                type: String
+                resolve: '@=resolver("ItemFieldValue", [value, "codeDepartement", args])'
+                args:
+                    language: { type: RepositoryLanguage }

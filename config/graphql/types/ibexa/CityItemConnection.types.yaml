@@ -1,0 +1,9 @@
+CityItemConnection:
+    type: relay-connection
+    config:
+        nodeType: CityItem
+        connectionFields:
+            sliceSize:
+                type: Int!
+            orderBy:
+                type: String

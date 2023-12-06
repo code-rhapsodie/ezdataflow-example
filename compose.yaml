@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+###> doctrine/doctrine-bundle ###
+  database:
+    image: mariadb:10.11
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+      MYSQL_DATABASE: ezdataflow
+      MYSQL_USER: ezdataflow
+      MYSQL_PASSWORD: ezdataflow
+###< doctrine/doctrine-bundle ###
