@@ -53,7 +53,6 @@
             "ibexa:encore:compile --config-name app": "symfony-cmd",
             "bazinga:js-translation:dump %PUBLIC_DIR%/assets --merge-domains": "symfony-cmd",
             "ibexa:encore:compile": "symfony-cmd",
-            "ibexa:graphql:generate-schema": "symfony-cmd"
         },
         "post-install-cmd": [
             "@auto-scripts"
