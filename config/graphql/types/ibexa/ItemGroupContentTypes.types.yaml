@@ -1,0 +1,13 @@
+ItemGroupContentTypes:
+    type: object
+    config:
+        fields:
+            article:
+                type: ArticleItemType
+                resolve: '@=resolver("ContentType", [{"identifier": "article"}])'
+            city:
+                type: CityItemType
+                resolve: '@=resolver("ContentType", [{"identifier": "city"}])'
+            folder:
+                type: FolderItemType
+                resolve: '@=resolver("ContentType", [{"identifier": "folder"}])'

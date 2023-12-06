@@ -1,0 +1,23 @@
+CityItemType:
+    type: object
+    inherits:
+        - BaseItemType
+    config:
+        interfaces:
+            - ItemType
+        fields:
+            nom:
+                type: TextLineFieldDefinition
+                resolve: '@=value.getFieldDefinition("nom")'
+            codesPostaux:
+                type: TextBlockFieldDefinition
+                resolve: '@=value.getFieldDefinition("codesPostaux")'
+            population:
+                type: IntegerFieldDefinition
+                resolve: '@=value.getFieldDefinition("population")'
+            codeRegion:
+                type: TextLineFieldDefinition
+                resolve: '@=value.getFieldDefinition("codeRegion")'
+            codeDepartement:
+                type: TextLineFieldDefinition
+                resolve: '@=value.getFieldDefinition("codeDepartement")'

@@ -1,0 +1,14 @@
+CityItemCreateInput:
+    type: input-object
+    config:
+        fields:
+            nom:
+                type: String
+            codesPostaux:
+                type: String
+            population:
+                type: Int
+            codeRegion:
+                type: String
+            codeDepartement:
+                type: String

@@ -1,11 +1,11 @@
 # Code Rhapsodie eZ Dataflow example
 
-This projet is based on eZ Platform 2.5.
+This projet is based on Ibexa OSS 4.5
 
 ## Requirements
 
 * A SGDB server (MySQL, MariaDB, or other...).
-* PHP 7.1+
+* PHP 8.1+
 * composer
 * yarn
 
@@ -17,7 +17,7 @@ Open your favorite terminal, and go into `ezdataflow-example` folder.
 Execute this command to install all vendor dependencies :
 
 ```shell script
-$ php composer install -o
+$ composer install -o
 ```
 
 ## Init the databases
@@ -25,7 +25,7 @@ $ php composer install -o
 Perform this command to initialize the database :
 
 ```shell script
-$ php bin/console ezplatform:install clean
+$ php bin/console ibexa:install
 ```
 
 ## Dataflow database schema
@@ -55,10 +55,10 @@ Now you can use all command to try Dataflow bundle and eZ Dataflow bunble.
 Try this command:
 
 ```shell script
-$ php bin/console code-rhapsodie:dataflow:execute fc '{"url":"https:\/\/geo.api.gouv.fr\/communes?fields=nom,code,codesPostaux,codeDepartement,codeRegion,population&format=json&geometry=centre","content_type":"city","parent_location_id":57}'
+$ php bin/console code-rhapsodie:dataflow:execute fc '{"url":"https:\/\/geo.api.gouv.fr\/communes?fields=nom,code,codesPostaux,codeDepartement,codeRegion,population&format=json&geometry=centre","content_type":"city","parent_location_id":54}'
 ```
 
-After end of work, go to admin into [the folder "French cities"](http://127.0.0.1/admin/content/location/57) with the eZ Publish admin.
+After end of work, go to admin into [the folder "French cities"](http://127.0.0.1/admin/view/content/52/full/true/54) with the Ibexa admin.
 
 To add a schedule from back office, the option must be in YAML format like this:
 

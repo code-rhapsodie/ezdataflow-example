@@ -1,0 +1,63 @@
+ItemGroupContent:
+    type: object
+    inherits:
+        - DomainContentTypeGroup
+    config:
+        fields:
+            _types:
+                type: ItemGroupContentTypes
+                resolve: {  }
+            articles:
+                type: ArticleItemConnection
+                description: 'No description available'
+                resolve: '@=resolver("ItemsOfTypeAsConnection", ["article", args])'
+                argsBuilder: 'Relay::Connection'
+                args:
+                    query: { type: ContentSearchQuery, description: 'A Content query used to filter results' }
+                    sortBy: { type: '[SortByOptions]', description: 'A Sort Clause, or array of Clauses. Add _desc after a Clause to reverse it' }
+            article:
+                type: ArticleItem
+                description: 'No description available'
+                resolve: '@=resolver("ItemOfType", [args, "article"])'
+                args:
+                    contentId: { type: Int, description: 'Content ID of the article' }
+                    remoteId: { type: String, description: 'Content remote ID of the article' }
+                    locationId: { type: Int, description: 'Location ID of the article' }
+                    locationRemoteId: { type: String, description: 'Location remote ID of the article' }
+                    urlAlias: { type: String, description: 'URL alias of the article' }
+            cities:
+                type: CityItemConnection
+                description: 'No description available'
+                resolve: '@=resolver("ItemsOfTypeAsConnection", ["city", args])'
+                argsBuilder: 'Relay::Connection'
+                args:
+                    query: { type: ContentSearchQuery, description: 'A Content query used to filter results' }
+                    sortBy: { type: '[SortByOptions]', description: 'A Sort Clause, or array of Clauses. Add _desc after a Clause to reverse it' }
+            city:
+                type: CityItem
+                description: 'No description available'
+                resolve: '@=resolver("ItemOfType", [args, "city"])'
+                args:
+                    contentId: { type: Int, description: 'Content ID of the city' }
+                    remoteId: { type: String, description: 'Content remote ID of the city' }
+                    locationId: { type: Int, description: 'Location ID of the city' }
+                    locationRemoteId: { type: String, description: 'Location remote ID of the city' }
+                    urlAlias: { type: String, description: 'URL alias of the city' }
+            folders:
+                type: FolderItemConnection
+                description: 'No description available'
+                resolve: '@=resolver("ItemsOfTypeAsConnection", ["folder", args])'
+                argsBuilder: 'Relay::Connection'
+                args:
+                    query: { type: ContentSearchQuery, description: 'A Content query used to filter results' }
+                    sortBy: { type: '[SortByOptions]', description: 'A Sort Clause, or array of Clauses. Add _desc after a Clause to reverse it' }
+            folder:
+                type: FolderItem
+                description: 'No description available'
+                resolve: '@=resolver("ItemOfType", [args, "folder"])'
+                args:
+                    contentId: { type: Int, description: 'Content ID of the folder' }
+                    remoteId: { type: String, description: 'Content remote ID of the folder' }
+                    locationId: { type: Int, description: 'Location ID of the folder' }
+                    locationRemoteId: { type: String, description: 'Location remote ID of the folder' }
+                    urlAlias: { type: String, description: 'URL alias of the folder' }
