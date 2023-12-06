@@ -52,7 +52,7 @@
             "yarn install": "script",
             "ibexa:encore:compile --config-name app": "symfony-cmd",
             "bazinga:js-translation:dump %PUBLIC_DIR%/assets --merge-domains": "symfony-cmd",
-            "ibexa:encore:compile": "symfony-cmd",
+            "ibexa:encore:compile": "symfony-cmd"
         },
         "post-install-cmd": [
             "@auto-scripts"
